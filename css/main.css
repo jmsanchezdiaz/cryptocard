@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryColor: hsl(215, 51%, 70%);
+  --accentColor: hsl(178, 100%, 50%);
+  --accentHoverColor: hsla(178, 100%, 50%, 0.404);
+
+  --containerColor: hsl(217, 54%, 11%);
+  --cardColor: hsl(216, 50%, 16%);
+  --hrColor: hsl(215, 32%, 27%);
+  --customWhite: hsl(0, 0%, 100%);
+
+  --light: 300;
+  --regular: 400;
+  --bold: 600;
+
+  --mobileSize: 375px;
+  --desktopSize: 1440px;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/*Utility classes*/
+
+.text-green {
+  color: var(--accentColor);
+  font-weight: var(--bold);
+}
+
+.text-white {
+  color: var(--customWhite);
+  font-weight: var(--bold);
+}
+
+.text-white:hover {
+  color: var(--accentColor);
+}
+
+.icon-img {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-weight: var(--regular);
+  min-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--containerColor);
+}
+
+.card-container {
+  border-radius: 10px;
+  background: var(--cardColor);
+  padding: 1rem;
+  max-width: 300px;
+  color: var(--primaryColor);
+}
+
+.card-img-container {
+  position: relative;
+  max-height: 286px;
+}
+
+.card-img-container .card-img {
+  border-radius: 5px;
+}
+
+.card-img-container:hover .card-container__hover {
+  display: grid;
+  place-items: center;
+}
+
+.card-container__hover {
+  top: 0;
+  left: 0;
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  height: 98%;
+  width: 100%;
+  background: var(--accentHoverColor);
+}
+
+.card-container__body h3 {
+  margin: 1rem 0;
+}
+
+.card-container__body p {
+  font-weight: var(--light);
+  margin-bottom: 1rem;
+}
+
+.card-container__body div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-container__body div span {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.card-container footer {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.card-container footer p {
+  font-size: 0.95rem;
+}
+
+.card-container footer img {
+  max-width: 25px;
+  max-height: 25px;
+  margin-left: 0.25rem;
+  border: 2px solid var(--customWhite);
+  border-radius: 100%;
+}
